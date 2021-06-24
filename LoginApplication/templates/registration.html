@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="static/LoginApplication/css/style.css?v=1.1" />
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <div style=" background-color: dodgerblue; border: 1px solid black; height: 80px; width: 100%; display: flex;">
+        <h3 id='tab'>StackFusion</h3>
+        <h3 style="padding-top: 28px; text-align: right; padding-left: 75%;">
+            <a style="color: white;" href="">  Contact</a>
+            <a style="color: white;" href="">  About us</a>
+        </h3>
+
+    </div>
+    &nbsp;
+    <fieldset id="fs" style="text-align: center;"><legend style="text-align: left;color:cornflowerblue; font-size: 20px;"><b> <u>Enter Details: -</u></b></legend>
+        
+        <form action="" method="POST">
+            <br/>
+            {% csrf_token %}
+            
+            Name : <input type="text" name="name" required/>{% if Name_error_message %}<br/><label id='error' style="color: red;">{{Name_error_message}}</label>{% endif %}<br/><br/>
+            Email : <input type="text" name="email" required/>{% if error_message %}<br/><label id='error' style="color: red;">{{ error_message }}</label>{% endif %}<br/><br/>
+            Date of Birth : <input type="date" name="dob" required/>{% if Dob_error_message %}<br/><label id='error' style="color: red;">{{ Dob_error_message }}</label>{% endif %}<br/><br/>
+            Mobile : <input type="number" name="mobile" required/>{% if Mobile_error_message %}<br/><label id='error' style="color: red;">{{ Mobile_error_message }}</label>{% endif %}<br/><br/>
+            <input type="submit" name="submit" value="Submit" onclick="alert('Are You want to send Mail and save data?')"/><br/>&nbsp;
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#tab{
+    margin-left: 15px;
+    margin-top: 28px;
+    padding-left: 8px;
+    color: white;
+}
+
+#fs{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    border: 5px double dodgerblue;
+    background-color:transparent;
+}
+
+#error {
+    color: red;
+}
+
+label {
+    color: red;
+}
